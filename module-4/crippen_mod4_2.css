@@ -1,0 +1,73 @@
+/* Center the text in the h1 tag on the page   */
+h1 
+{
+  text-align: center;
+  color: rgba(204, 0, 0, 0.9);
+}
+
+/* Inside the image-gallery div add three side-by-side divs using CSS grids (see the resources section for assistance).  Each of these divs will contain a title, image, and captions. */
+#image-gallery 
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* Creates three equal-width columns */
+  margin-top: 10%; /* Give the image-gallery div a margin-top of 10% */
+}
+
+/* Optional: Style the individual gallery items */
+.book 
+{
+  text-align: center; /* Centers the title and caption under the image */
+  border: 1px solid red;
+  padding: 15px; 
+}
+
+.book img 
+{
+  max-width: 100%;
+  height: auto;
+  display: block;  
+  margin: 0 auto 10px auto;
+}
+
+/* Center the h3 text (title for each of the image gallery items) */
+.book h3 
+{
+  text-align: center;
+  color: rgba(220, 20, 60, 1);
+}
+
+/* Apply text-align center to the figure tag  (this will basically center the image in the div) */
+figure 
+{
+  text-align: center;
+}
+
+/* Apply a font style of italic to the figcaption text and set the font-size to .75em  */
+.book p 
+{
+  font-style: italic;
+  font-size: .75em;
+  color: rgba(178, 34, 34, 0.85); 
+}
+
+/* Underneath the picture gallery, add a link back to the landing/portal page in the same position as 3.3. */
+.bottom 
+{
+    width: 100%;
+    margin-top: 150px;   
+    margin-bottom: 20px;
+}
+
+/* Add :hover to the links 
+This link should be floated to the right.*/
+.bottom a 
+{
+    float: right;          /* moves the link to the right */
+    text-decoration: none; /* remove underline by default */
+}
+
+/* Add the underlines when a cursor hovers over the links */
+.bottom a:hover 
+{
+    text-decoration: underline; /* underline on hover */
+}
