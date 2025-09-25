@@ -1,0 +1,5 @@
+/* Center the text in the h1 tag on the page   */
+h1 
+{
+  text-align: center;
+}
