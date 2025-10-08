@@ -1,0 +1,12 @@
+  .footer {
+    color: #3366cc;       
+    font-weight: 400;     
+    float: right;        
+    padding-right: 10px; 
+    font-style: italic;  
+    text-decoration: none;
+  }
+
+  .footer:hover {
+    text-decoration: underline;
+  }
