@@ -1,28 +1,33 @@
-#container {
+#container 
+{
   margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px;
 }
 
-h1, h2, h3, h4 {
-  background-color: #000080;   /* dark blue */
-  color: #ffffff;              /* white text for contrast */
-  border: 1px solid #000000;   /* black border */
+h1, h2, h3, h4 
+{
+  background-color: #000080;   
+  color: #ffffff;              
+  border: 1px solid #000000;  
   padding: 10px;
-  font-family: "Times New Roman", Times, serif; /* Example Google font */
+  font-family: "Times New Roman", Times, serif;
 }
 
-a {
-  color: #000000;       /* black link color */
-  text-decoration: none; /* remove underline */
+a 
+{
+  color: #000000;
+  text-decoration: none; 
 }
 
-a:hover {
-  color: #0000FF;       /* blue on hover */
+a:hover 
+{
+  color: #0000FF;     
 }
 
-a:visited {
-  color: #666666;       /* muted gray for visited links */
+a:visited 
+{
+  color: #666666;     
 }
 
 
