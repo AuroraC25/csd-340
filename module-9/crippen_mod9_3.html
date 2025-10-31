@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>CSD 340 Web Development with HTML and CSS</title>
+	
+	<meta name="description" content="CSD340 Module 9.3 Assignment">
+	<meta name="keywords" content="csd340, assignment">
+	<meta name="robots" content="noindex">
+	<meta name="author" content="Aurora Crippen">
+	
+	<link href="crippen_mod9_3.css" type="text/css" rel="stylesheet">
+	
+	<script>
+		var firstWord = "peanut butter";
+		var secondWord = "jelly";
+		var thirdWord = "Apple";
+		var fourthWord = "Honeycrisp";
+	</script>
+	
+</head>
+
+<body>
+
+	<div id="container">
+	
+	<header>
+	<h1>Assignment 9.3: JavaScript - Part 1</h1>
+	</header>
+
+	<h2>A Sandwich Soliloquy</h2>
+
+	<p class="intro"></p>
+	<p>O <span id="word1">__________</span>, creamy as the dawn,
+		<br>Thou spread’st upon the bread with velvet might.
+		<br>Thy noble thickness, smooth as polished fawn,
+		<br>Doth promise comfort with each tender bite.</p>
+	<p>But lo! What sweetness through yon <span id="word2">__________</span> breaks?
+		<br>It is the apple’s glow—fair Honeycrisp!
+		<br>Her golden notes, like autumn’s orchard wakes,
+		<br>Do lend a crunch both delicate and brisk.</p>
+	<p><span id="word3">__________</span> jelly’s gleam, with nectar’s kiss,
+		<br>By cunning hand is set in gentle place.
+		<br>Yet Honeycrisp, with ruby edge of bliss,
+		<br>Doth crown the feast—perfection, slice by slice.</p>
+	<p>Together, three in harmony unite:
+		<br>The creamy, sweet, the crisp of orchard air.
+		<br>In every bite, a symphony of light—
+		<br>A sandwich fit for gods beyond compare.</p>
+	<p>O PB, apple jelly, <span id="word4">__________</span> divine—
+		<br>I pledge my heart. Forever thou art mine.</p>
+		
+	<p>
+		<button onclick="document.getElementById('word1').innerHTML = firstWord">Peanut Butter</button>
+		<button onclick="document.getElementById('word2').innerHTML = secondWord">Jelly</button>
+		<button onclick="document.getElementById('word3').innerHTML = thirdWord">Apple</button>
+		<button onclick="document.getElementById('word4').innerHTML = fourthWord">Honeycrisp</button>
+	</p>
+
+	<hr>
+	
+	<address>
+	<a href="https://www.bellevue.edu/" target="_blank">Bellevue University</a>
+	<p>1000 Galvin Road South</p>
+	<p>Bellevue, NE 68005</p>
+	</address>
+
+	</div>
+
+	<footer>
+		<span class="footer-left">&copy; 2025 Crippen</span>
+		<span class="footer-right">
+			<a href="../index.html">Back to Landing Page</a>
+		</span>
+	</footer>
+
+</body>
+
+</html>
