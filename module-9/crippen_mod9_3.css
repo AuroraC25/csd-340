@@ -3,7 +3,7 @@ header
 {
     background-color: #003366; 
     color: white;
-    padding: 20px;
+    padding: 5px 0;
     text-align: center;
 }
 
@@ -78,9 +78,9 @@ footer
 	left: 0;
     bottom: 0;
     width: 100%;
-	min-height: 50px;
-	padding: 12px 25px;
-	font-size: 15px;
+	min-height: 30px;
+	padding: 6px 15px;
+	font-size: 12px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
