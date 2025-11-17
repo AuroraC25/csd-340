@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 5px 0;
+        }
+        #displayArea {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: fit-content;
+        }
+        .item-row {
+            margin-bottom: 5px;
+        }
+        .delete-btn {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+	<p>This is an interactive To Do List. Type in your first item in the text box, then click Add. Click the Display button to see current items in the list. Click on Delete if you'd like to remove the entry.</p>
+    <label for="itemInput">Enter item:</label>
+    <input type="text" id="itemInput">
+    <br>
+    <button onclick="addItem()">Add</button>
+    <button onclick="displayItems()">Display</button>
+
+    <div id="displayArea"></div>
+
+    <script>
+        let itemsArray = [];
+
+
+        function addItem() {
+            const inputBox = document.getElementById("itemInput");
+            const item = inputBox.value.trim();
+
+            if(item === "") {
+                alert("Please enter a value before adding.");
+                return;
+            }
+
+            itemsArray.push(item);
+            alert(`Added "${item}" to the array at position ${itemsArray.length}`);
+            inputBox.value = ""; 
+            inputBox.focus();
+
+            displayItems(); 
+        }
+
+
+        function deleteItem(index) {
+            const removedItem = itemsArray.splice(index, 1);
+            alert(`Deleted "${removedItem}" from the array.`);
+            displayItems(); 
+        }
+
+
+        function displayItems() {
+            const displayDiv = document.getElementById("displayArea");
+            displayDiv.innerHTML = "";
+
+            if(itemsArray.length === 0) {
+                displayDiv.innerHTML = "<em>The array is empty.</em>";
+                return;
+            }
+
+            itemsArray.forEach((item, i) => {
+                const itemRow = document.createElement("div");
+                itemRow.className = "item-row";
+
+                const itemText = document.createElement("span");
+                itemText.innerHTML = `${i + 1}. ${item}`;
+
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.className = "delete-btn";
+                deleteButton.onclick = () => deleteItem(i);
+
+                itemRow.appendChild(itemText);
+                itemRow.appendChild(deleteButton);
+                displayDiv.appendChild(itemRow);
+            });
+        }
+    </script>
+</body>
+</html>
