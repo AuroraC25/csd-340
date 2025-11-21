@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+	
+	<link rel="stylesheet" href="crippen_mod12_2.css">
+
+</head>
+
+<body>
+	<div id="container">
+	
+	<h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+	</div>
+	
+   <div class="flex-container">
+        <div class="left">
+            <h3>Top 10 Favorite Books</h3>
+			
+			<button onclick="topToBottom()">Top to Bottom</button>
+			<button onclick="bottomToTop()">Bottom to Top</button>
+			
+			<div id="bookList" style="margin-top:15px; font-weight:300;"></div>
+        </div>
+		
+
+        <div class="right">
+            <h3>5 Things I’ve Learned Since the Course Started</h3>
+			
+           <ul>
+                <li>How to use git and GitHub</li>
+                <li>How to create a repository with an index landing page with links to html and CSS in folders</li>
+                <li>How to apply CSS styles</li>
+                <li>How to link CSS to HTML</li>
+                <li>How to use divs for layout</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <a href="../index.html">Back to Landing Page</a>
+    </div>
+
+<script>
+    const books = [
+        { number: 1, title: "Coraline — Neil Gaiman" },
+        { number: 2, title: "His Dark Materials series — Philip Pullman" },
+        { number: 3, title: "Emma — Jane Austen" },
+        { number: 4, title: "His Dark Materials series — Philip Pullman" },
+        { number: 5, title: "The Hitchhiker's Guide to the Galaxy series — Douglas Adams" },
+        { number: 6, title: "The Five People You Meet in Heaven — Mitch Albom" },
+        { number: 7, title: "The Hilarious World of Depression — John Moe" },
+        { number: 8, title: "Harry Potter series — J.K. Rowling" },
+        { number: 9, title: "The Hobbit — J.R.R. Tolkien" },
+        { number: 10, title: "The Let Them Theory — Mel Robbins & Sawyer Robbins" }
+    ];
+
+   window.onload = function() {
+        displayBooks(books);
+    };
+
+     function topToBottom() {
+        const sorted = [...books].sort((a, b) => a.title.localeCompare(b.title));
+        displayBooks(sorted);
+    }
+
+    function bottomToTop() {
+        const sorted = [...books].sort((a, b) => b.title.localeCompare(a.title));
+        displayBooks(sorted);
+    }
+
+    function displayBooks(arr) {
+        let output = "<ul style='list-style-type:none; padding-left:0;'>";
+        arr.forEach(book => {
+            output += `<li><strong>${book.number}.</strong> ${book.title}</li>`;
+        });
+        output += "</ul>";
+        document.getElementById("bookList").innerHTML = output;
+    }
+</script>
+
+</body>
+
+</html>
